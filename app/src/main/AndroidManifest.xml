@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Vault"
+        android:roundIcon="@mipmap/ic_launcher">
+
+        <!-- This activity becomes the phone's Home screen when the user
+             picks it as default launcher. Apps added to the vault are
+             simply not drawn here, so they vanish from the home/app-drawer
+             experience this launcher provides. -->
+        <activity
+            android:name=".PinActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Vault.NoActionBar"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".VaultActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Vault.NoActionBar" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Vault.NoActionBar" />
+
+        <activity
+            android:name=".AppPickerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Vault.NoActionBar" />
+
+    </application>
+</manifest>

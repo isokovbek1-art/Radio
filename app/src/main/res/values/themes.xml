@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Vault" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="colorPrimary">@color/accent</item>
+    </style>
+    <style name="Theme.Vault.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnim</item>
+    </style>
+    <style name="KeyBtn">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:background">@drawable/key_bg</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:elegantTextHeight">true</item>
+    </style>
+    <style name="WindowAnim" parent="android:Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_scale_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_scale_out</item>
+    </style>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:paddingTop="48dp"
+    android:paddingHorizontal="16dp">
+
+    <TextView
+        android:id="@+id/pickerBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="←  Ilovani tanlang"
+        android:textColor="@color/text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bosilgan ilova Vault ichiga ko'chadi va bosh ekrandan yo'qoladi"
+        android:textColor="@color/muted"
+        android:textSize="12sp"
+        android:layout_marginBottom="18dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pickerGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"/>
+
+</LinearLayout>
